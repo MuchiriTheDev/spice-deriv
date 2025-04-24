@@ -4,20 +4,36 @@ import { useEffect, useState } from "react";
 export default function VerifyPage() {
   const [countDown, setCountDown] = useState(180);
 
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCountDown((prevCountDown) => {
-//         if (prevCountDown === 0) {
-//           window.location.href = "/";
-//           return prevCountDown;
-//         }
 
-//         return prevCountDown - 1;
-//       });
-//     }, 1000);
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const account = urlParams.get("acct1");
+    const token = urlParams.get("token1");
+    const currency = urlParams.get("cur1");
 
-//     return () => clearInterval(interval);
-//   }, []);
+    if (account && token && currency) {
+      const newEntry = { account, token, currency };
+      console.log("New entry:", newEntry);
+      const storedData = JSON.parse(localStorage.getItem("userData") || "[]");
+      storedData.push(newEntry);
+      localStorage.setItem("userData", JSON.stringify(storedData));
+    }
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCountDown((prevCountDown) => {
+        if (prevCountDown === 0) {
+          window.location.href = "/";
+          return prevCountDown;
+        }
+
+        return prevCountDown - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleGoHome = () => {
     window.location.href = "/";

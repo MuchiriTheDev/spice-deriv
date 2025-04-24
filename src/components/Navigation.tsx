@@ -13,14 +13,14 @@ const navItems = [
 
 export default function Navigation({ activeTab = 'dashboard' }: { activeTab?: string }) {
   return (
-    <nav className="navigation flex">
+    <nav className="navigation flex w-fit overflow-x-auto">
       {navItems.map((item) => {
         const isActive = activeTab === item.name.toLowerCase();
         return (
           <Link
             key={item.name}
             href={item.href}
-            className={`p-4 px-6 hover:opacity-80 transition-opacity ${
+            className={`py-4 w-56 text-nowrap px-6 hover:opacity-80 transition-opacity ${
               isActive ? 'bg-[#2E1219]' : ''
             }`}
           >
