@@ -33,10 +33,10 @@ const Guidance = () => {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-            <GuideCards image={assets.thumbnail} />
-            <GuideCards image={assets.thumbnail} />
-            <GuideCards image={assets.thumbnail} />
-            <GuideCards image={assets.thumbnail} />
+            <GuideCards image={assets.thumbnail} title={`An introduction to SpiceDeriv's Bot`}/>
+            <GuideCards image={assets.thumbnail} title={`How to build a basic trading bot with SpiceDeriv Bot`}/>
+            <GuideCards image={assets.thumbnail} title={`How to use Martingale strategy on SpiceDeriv Bot`}/>
+            <GuideCards image={assets.thumbnail} title={`Introducing Accumulator Options on SpiceDeriv Bot: Available for automated trading`}/>
           </div>
         </div>
       </div>
