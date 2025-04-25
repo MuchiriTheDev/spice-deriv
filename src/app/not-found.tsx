@@ -7,8 +7,9 @@ export default function NotFound() {
             <div className="flex flex-col items-center p-8 ">
                 <AlertTriangle className="w-20 h-20 text-red-500 mb-6 animate-pulse" />
                 <h1 className="text-5xl font-extrabold text-white tracking-wider">
-                    404 - Page Not Found
+                    404 
                 </h1>
+                <h2 className="text-2xl font-semibold text-gray-200 mt-2">Page Not Found</h2>
                 <p className="mt-4 text-lg text-gray-400 text-center">
                     Oops! The page you're looking for doesn't exist or has been moved.
                 </p>
