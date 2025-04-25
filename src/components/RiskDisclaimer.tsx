@@ -1,6 +1,7 @@
 "use client";
 
 import { AlertCircle, X } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function RiskDisclaimer() {
@@ -9,9 +10,10 @@ export default function RiskDisclaimer() {
   return (
     <div className="">
       <button className="risk-disclaimer cursor-pointer fixed bottom-0 w-full" onClick={() => setIsOpen(true)}>
-      <AlertCircle className="w-6 h-6" />
-      Risk Disclaimer
-    </button>
+        <AlertCircle className="w-6 h-6" />
+        Risk Disclaimer
+      </button>
+      
 
     {isOpen && (
       <div className="fixed top-0 left-0 w-full h-full z-10 p-4 bg-black/50 flex justify-center items-center" id="risk-disclaimer-popup">
@@ -24,6 +26,7 @@ export default function RiskDisclaimer() {
               <X className="w-6 h-6" />
             </button>
          </div>
+         
 
           <div className="mt-3 text-lg font-medium">
             <p className="">Deriv offers complex derivatives, such as options and contracts for difference (“CFDs”).</p>
