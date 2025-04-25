@@ -1,20 +1,20 @@
 "use client";
 
-import Header from '@/components/Header';
-import Navigation from '@/components/Navigation';
-import BotStatus from '@/components/BotStatus';
-import BotTabs from '@/components/BotTabs';
-import BotOptions from '@/components/BotOptions';
-import TourModal from '@/components/TourModal';
-import RiskDisclaimer from '@/components/RiskDisclaimer';
-import BotStats from '@/components/BotStats';
-import RunStats from '@/components/RunStats';
+import Header from '@/components/global-components/Overall/Header';
+import Navigation from '@/components/global-components/Overall/Navigation';
+import BotStatus from '@/components/global-components/Bots/BotStatus';
+import BotTabs from '@/components/global-components/Bots/BotTabs';
+import BotOptions from '@/components/global-components/Bots/BotOptions';
+import TourModal from '@/components/global-components/Tours/TourModal';
+import RiskDisclaimer from '@/components/global-components/Overall/RiskDisclaimer';
+import BotStats from '@/components/global-components/Bots/BotStats';
+import RunStats from '@/components/global-components/Overall/RunStats';
 
 export default function ClientPage() {
   return (
     <main className="flex min-h-screen flex-col">
       <Header />
-      <Navigation activeTab="bot" />
+      <Navigation activeTab="dashboard" />
       <BotStatus />
 
       <div className="container mx-auto p-4 sm:p-6">

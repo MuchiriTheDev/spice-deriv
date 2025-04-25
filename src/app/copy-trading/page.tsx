@@ -1,5 +1,5 @@
-import Header from "@/components/Header";
-import Navigation from "@/components/Navigation";
+import Header from "@/components/global-components/Overall/Header";
+import Navigation from "@/components/global-components/Overall/Navigation";
 
 export default function CopyTradingPage() {
     return (

@@ -1,13 +1,13 @@
 "use client";
 
-import Header from '@/components/Header';
-import Navigation from '@/components/Navigation';
-import BotStatus from '@/components/BotStatus';
-import BotTabs from '@/components/BotTabs';
-import BotOptions from '@/components/BotOptions';
-import RiskDisclaimer from '@/components/RiskDisclaimer';
-import BotStats from '@/components/BotStats';
-import RunStats from '@/components/RunStats';
+import Header from '@/components/global-components/Overall/Header';
+import Navigation from '@/components/global-components/Overall/Navigation';
+import BotStatus from '@/components/global-components/Bots/BotStatus';
+import BotTabs from '@/components/global-components/Bots/BotTabs';
+import BotOptions from '@/components/global-components/Bots/BotOptions';
+import RiskDisclaimer from '@/components/global-components/Overall/RiskDisclaimer';
+import BotStats from '@/components/global-components/Bots/BotStats';
+import RunStats from '@/components/global-components/Overall/RunStats';
 
 export default function BotPage() {
   return (

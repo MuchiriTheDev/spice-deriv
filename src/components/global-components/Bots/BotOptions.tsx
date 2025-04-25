@@ -1,3 +1,4 @@
+import { link } from 'fs';
 import { Computer, ChartBar, RedoDot, Cog } from 'lucide-react';
 
 const options = [
@@ -7,14 +8,10 @@ const options = [
     icon: <Computer className="w-16 h-16 md:w-20 md:h-20 p-3 rounded-lg" />
   },
   {
-    id: 'sv5-bot',
-    name: 'SV 5 BOT',
-    icon: <RedoDot className="w-16 h-16 md:w-20 md:h-20 p-3 rounded-lg" />
-  },
-  {
     id: 'bot-builder',
     name: 'Bot Builder',
-    icon: <Cog className="w-16 h-16 md:w-20 md:h-20 p-3 rounded-lg" />
+    icon: <Cog className="w-16 h-16 md:w-20 md:h-20 p-3 rounded-lg" />,
+    link: '/bot'
   },
   {
     id: 'quick-strategy',
@@ -25,7 +22,7 @@ const options = [
 
 export default function BotOptions() {
   return (
-    <div className="grid grid-cols-4 gap-4 max-w-3xl mx-auto my-8">
+    <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto my-8">
       {options.map((option) => (
         <div
           key={option.id}

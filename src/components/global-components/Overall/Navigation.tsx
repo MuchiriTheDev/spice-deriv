@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Menu, X, Play } from "lucide-react";
 
 const navItems = [
-  { name: "Dashboard", href: "/dashboard" },
+  { name: "Dashboard", href: "/" },
   { name: "Bot Builder", href: "/bot" },
   { name: "Analysis Tools", href: "/analysis-tool" },
   { name: "Free Bots", href: "/free-bots" },

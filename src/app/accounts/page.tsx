@@ -1,9 +1,9 @@
 "use client";
 
-import Header from '@/components/Header';
-import Navigation from '@/components/Navigation';
-import BotStatus from '@/components/BotStatus';
-import RiskDisclaimer from '@/components/RiskDisclaimer';
+import Header from '@/components/global-components/Overall/Header';
+import Navigation from '@/components/global-components/Overall/Navigation';
+import BotStatus from '@/components/global-components/Bots/BotStatus';
+import RiskDisclaimer from '@/components/global-components/Overall/RiskDisclaimer';
 
 export default function DashboardPage() {
   return (
