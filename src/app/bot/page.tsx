@@ -13,7 +13,7 @@ export default function BotPage() {
   return (
     <main className="flex min-h-screen flex-col">
       <Header />
-      <Navigation activeTab="bot editor" />
+      <Navigation activeTab="bot builder" />
       <BotStatus />
 
       <div className="container mx-auto p-6">
