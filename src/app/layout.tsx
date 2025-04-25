@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className={ibmPlexSans.className}>
         {children}
         <Toaster
-          position="top-right"
+          position="top-center"
           toastOptions={{
             className: "",
             duration: 5000,

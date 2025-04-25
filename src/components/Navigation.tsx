@@ -7,10 +7,10 @@ import { Menu, X, Play } from "lucide-react";
 const navItems = [
   { name: "Dashboard", href: "/dashboard" },
   { name: "Bot Builder", href: "/bot" },
-  { name: "Analysis Tools", href: "/manual" },
-  { name: "Free Bots", href: "/strategy" },
-  { name: "Copy Trading", href: "/chart" },
-  { name: "Tutorials", href: "/sv5" },
+  { name: "Analysis Tools", href: "/analysis-tool" },
+  { name: "Free Bots", href: "/free-bots" },
+  { name: "Copy Trading", href: "/copy-trading" },
+  { name: "Tutorials", href: "/tutorials" },
 ];
 
 export default function Navigation({ activeTab = "dashboard" }: { activeTab?: string }) {

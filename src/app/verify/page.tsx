@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function VerifyPage() {
-  const [countDown, setCountDown] = useState(180);
+  const [countDown, setCountDown] = useState(30);
 
 
   useEffect(() => {
@@ -11,7 +11,6 @@ export default function VerifyPage() {
     const account = urlParams.get("acct1");
     const token = urlParams.get("token1");
     const currency = urlParams.get("cur1");
-    toast.success("Account verified successfully!");
 
     if (account && token && currency) {
       const newEntry = { account, token, currency };
@@ -19,7 +18,10 @@ export default function VerifyPage() {
       const storedData = JSON.parse(localStorage.getItem("userData") || "[]");
       storedData.push(newEntry);
       localStorage.setItem("userData", JSON.stringify(storedData));
-      
+      toast.success("Logged In successfully!");
+    } else {
+      toast.error("Failed to log in. Please try again.");
+      window.location.href = "/";
     }
 
   }, []);
@@ -44,11 +46,11 @@ export default function VerifyPage() {
   };
 
   return (
-    <div className="min-h-screen bg-secondary flex items-center justify-center ">
-      <div className="bg-white/70 p-12 max-w-2xl mx-auto rounded-lg shadow-lg">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center ">
+      <div className="bg-white/70 p-12 max-w-2xl mx-auto h-3/4 rounded-lg shadow-lg">
         <div className="flex items-center justify-center">
-          <h1 className="text-3xl font-bold text-primary-foreground">
-            SpiceDeriv.com
+          <h1 className="text-3xl font-extrabold text-primary-foreground">
+            Spicederiv.com
           </h1>
         </div>
         <p className="text-md text-center text-gray-700 mt-4">
@@ -67,17 +69,6 @@ export default function VerifyPage() {
           </button>
         </div>
       </div>
-      <Toaster
-        position="top-right"
-        toastOptions={{
-          className: "",
-          duration: 5000,
-          style: {
-            background: "#4e1522",
-            color: "#fff",
-          },
-        }}
-       />
     </div>
   );
 }
