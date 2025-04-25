@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -23,7 +24,20 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="https://ext.same-assets.com/4239504319/2667292365.png" />
       </head>
-      <body className={ibmPlexSans.className}>{children}</body>
+      <body className={ibmPlexSans.className}>
+        {children}
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            className: "",
+            duration: 5000,
+            style: {
+              background: "#4e1522",
+              color: "#fff",
+            },
+          }}
+        />
+      </body>
     </html>
   );
 }

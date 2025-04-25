@@ -9,8 +9,6 @@ import TourModal from '@/components/TourModal';
 import RiskDisclaimer from '@/components/RiskDisclaimer';
 import BotStats from '@/components/BotStats';
 import RunStats from '@/components/RunStats';
-import Link from 'next/link';
-import { Toaster } from 'react-hot-toast';
 
 export default function ClientPage() {
   return (
@@ -65,7 +63,6 @@ export default function ClientPage() {
 
       <TourModal />
       <RiskDisclaimer />
-      <Toaster />
     </main>
   );
 }

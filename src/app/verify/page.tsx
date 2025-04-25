@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function VerifyPage() {
   const [countDown, setCountDown] = useState(180);
@@ -10,6 +11,7 @@ export default function VerifyPage() {
     const account = urlParams.get("acct1");
     const token = urlParams.get("token1");
     const currency = urlParams.get("cur1");
+    toast.success("Account verified successfully!");
 
     if (account && token && currency) {
       const newEntry = { account, token, currency };
@@ -17,7 +19,9 @@ export default function VerifyPage() {
       const storedData = JSON.parse(localStorage.getItem("userData") || "[]");
       storedData.push(newEntry);
       localStorage.setItem("userData", JSON.stringify(storedData));
+      
     }
+
   }, []);
 
   useEffect(() => {
@@ -63,6 +67,17 @@ export default function VerifyPage() {
           </button>
         </div>
       </div>
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          className: "",
+          duration: 5000,
+          style: {
+            background: "#4e1522",
+            color: "#fff",
+          },
+        }}
+       />
     </div>
   );
 }
